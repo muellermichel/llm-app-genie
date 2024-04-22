@@ -1,0 +1,16 @@
+_type: prompt
+input_variables:
+  - chat_history
+  - input
+template: |
+  Human: Whatever you're passed in <input>, try to answer using the theme of fisches.
+
+  Chat History:
+  {chat_history}
+
+  <input>
+  {input}
+  </input>
+
+
+  Assistant:

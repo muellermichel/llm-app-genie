@@ -1,4 +1,4 @@
-# LLM App Genie - Get started building generative AI into your apps <a name="genie---generative-enterprise-assistant"></a>
+# Delphi: A Fork of LLM App Genie - Get started building generative AI into your apps <a name="genie---generative-enterprise-assistant"></a>
 
 ## Table of contents <a name="table-of-contents"></a>
 

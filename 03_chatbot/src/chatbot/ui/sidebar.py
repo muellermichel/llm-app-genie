@@ -358,6 +358,7 @@ def write_sidebar(
                 help=streaming_help_msg
             )
             model.streaming_on = streaming
+            logger.info(f"Selected model is {model}")
 
         with st.expander('Change model parameters'):
             temperature = st.slider("Temperature",
