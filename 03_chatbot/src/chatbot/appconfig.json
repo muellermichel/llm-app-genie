@@ -3,29 +3,29 @@
   "appearance": {
     "type": "AWSomeChatAppearance",
     "parameters": {
-      "name": "Genie",
-      "faviconUrl": "https://a0.awsstatic.com/libra-css/images/logos/aws_smile-header-desktop-en-white_59x35@2x.png"
+      "name": "Delphi",
+      "faviconUrl": "https://www.fam.ch/files/theme/images/FishLogo4C.svg"
     }
   },
+  "amazonBedrock": [
+    {
+      "type": "AmazonBedrock",
+      "parameters": {
+        "region": "us-west-2"
+      }
+    }
+  ],
   "llmConfig": {
     "parameters": {
-      "meta\\.llama.*": {
+      "^anthropic\\.claude\\-v2:1$": {
         "type": "LLMConfig",
         "parameters": {
-          "chatPrompt": "prompts/meta_llama2_chat.yaml",
-          "ragPrompt": "prompts/meta_llama2_rag.yaml"
-        }
-      },
-      "anthropic\\.claude.*": {
-        "type": "LLMConfig",
-        "parameters": {
-          "chatPrompt": "prompts/anthropic_claude_chat.yaml",
-          "ragPrompt": "prompts/anthropic_claude_rag.yaml"
+          "chatPrompt": "delphi/prompts/anthropic_claude_chat.yaml",
+          "ragPrompt": "delphi/prompts/anthropic_claude_rag.yaml",
+          "temperature": 0.8
         }
       }
     },
     "type": "LLMConfigMap"
   }
 }
-
-

@@ -96,6 +96,10 @@ class ModelCatalog(Catalog):
                         supports_streaming= ("responseStreamingSupported" in fm) and fm["responseStreamingSupported"]
                     )
                     for fm in foundation_models
+                    if any(
+                        config_model_id_regex.match(fm["modelId"])
+                        for config_model_id_regex in config_model_id_regexs
+                    )
                 ]
 
             except (
@@ -177,4 +181,4 @@ class ModelCatalog(Catalog):
         """Bootstraps the catalog."""
         model_id_regex = list(map(re.compile, self.llm_config.keys()))
         self._get_bedrock_models(model_id_regex)
-        self._get_sagemaker_models()
+        # self._get_sagemaker_models()

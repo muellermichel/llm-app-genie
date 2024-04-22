@@ -293,6 +293,8 @@ gatherUsageStats = false
 
 
 [theme]
+base = "light"
+primaryColor = "#054c8d"
 
 # The preset Streamlit theme that your custom theme inherits from.
 # One of "light" or "dark".
